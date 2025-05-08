@@ -1,4 +1,5 @@
 /target
 /database
 /.vscode
+/static/css
 .env
