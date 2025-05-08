@@ -1,8 +1,8 @@
-use std::env;
+use std::{env, process::Command};
 
 use database::{establish_pool, DbPool};
-use diesel::{Connection, SqliteConnection};
 use dotenvy::dotenv;
+use rocket::fs::{FileServer, relative};
 use rocket_dyn_templates::Template;
 
 pub mod database;
@@ -23,8 +23,20 @@ fn initialize_database() -> DbPool {
 }
 
 
+fn configure_application() {
+    Command::new("sass")
+        .arg("static/sass/main.sass")
+        .arg("static/css/main.css")
+        .output()
+        .expect("Failed to compiled SASS");
+}
+
+
 #[rocket::main]
 async fn main() -> Result<(), rocket::Error> {
+    // Configure the application before running.
+    configure_application();
+
     // Connect to the database
     let db_pool = initialize_database();
 
@@ -32,6 +44,7 @@ async fn main() -> Result<(), rocket::Error> {
     rocket::build()
         .manage(db_pool)
         .mount("/admin", routes::admin::routes())
+        .mount("/static", FileServer::from(relative!("/static")))
         .attach(Template::fairing())
         .launch()
         .await?;
