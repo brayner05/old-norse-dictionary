@@ -1,0 +1,12 @@
+{
+    "targets": {
+        "release": {
+            "optimize": true,
+            "outFile": "static/wasm/app.wasm"
+        },
+        "debug": {
+            "debug": true,
+            "outFile": "static/wasm/app.debug.wasm"
+        }
+    }
+}
