@@ -26,8 +26,8 @@ diesel::table! {
 }
 
 diesel::table! {
-    word (word) {
-        word -> Text,
+    word (native_word) {
+        native_word -> Text,
         english_translation -> Text,
     }
 }

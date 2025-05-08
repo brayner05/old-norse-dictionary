@@ -1,7 +1,17 @@
 [package]
-name = "norse-dictionary"
+name = "norse_dictionary"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 rocket = "*"
+diesel = { version = "2.2.0", features = ["sqlite", "returning_clauses_for_sqlite_3_35", "r2d2"] }
+serde = { version = "1.0", features = ["derive"] }  # Add serde directly here
+# build libsqlite3 as part of the build process
+# uncomment this line if you run into setup issues
+# libsqlite3-sys = { version = "0.30", features = ["bundled"] }
+dotenvy = "0.15"
+
+[dependencies.rocket_dyn_templates]
+version = "0.2.0"
+features = ["handlebars", "tera", "minijinja"]
