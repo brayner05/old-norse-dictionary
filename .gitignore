@@ -1,5 +1,4 @@
 /target
-/migrations
 /database
 /.vscode
 .env
