@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-rocket = "*"
+rocket = { version = "0.5.0", features = ["json"]}
 diesel = { version = "2.2.0", features = ["sqlite", "returning_clauses_for_sqlite_3_35", "r2d2"] }
 serde = { version = "1.0", features = ["derive"] }  # Add serde directly here
 # build libsqlite3 as part of the build process
