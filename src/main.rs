@@ -44,6 +44,7 @@ async fn main() -> Result<(), rocket::Error> {
     rocket::build()
         .manage(db_pool)
         .mount("/admin", routes::admin::routes())
+        .mount("/api", routes::api::routes())
         .mount("/static", FileServer::from(relative!("/static")))
         .attach(Template::fairing())
         .launch()

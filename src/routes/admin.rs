@@ -15,7 +15,7 @@ fn admin(pool: &State<DbPool>) -> Template {
             .load::<Word>(&mut db_connection)
             .expect("Failed to load posts.");
 
-    Template::render("admin", context! { words: words })
+    Template::render("admin", context! { })
 }
 
 

@@ -1,0 +1,32 @@
+@mixin add_font($name, $url, $format, $weight: 400, $style: normal)
+    @font-face
+        font-family: $name
+        src: url($url) format($format)
+        font-weight: $weight
+        font-style: $style
+        font-display: swap
+
+@include add_font("Caudex", "/static/fonts/Caudex/Caudex-Regular.ttf", "truetype", 400, normal)
+@include add_font("Caudex", "/static/fonts/Caudex/Caudex-Bold.ttf", "truetype", 700, normal)
+@include add_font("Caudex", "/static/fonts/Caudex/Caudex-Italic.ttf", "truetype", 400, italic)
+@include add_font("Caudex", "/static/fonts/Caudex/Caudex-BoldItalic.ttf", "truetype", 700, italic)
+
+@include add_font("Domine", "/static/fonts/Domine/Domine-VariableFont_wght.ttf", "truetype-variations", 100 900, normal)
+
+@include add_font("Domine", "/static/fonts/Domine/static/Domine-Regular.ttf", "truetype", 400, normal)
+@include add_font("Domine", "/static/fonts/Domine/static/Domine-Medium.ttf", "truetype", 500, normal)
+@include add_font("Domine", "/static/fonts/Domine/static/Domine-SemiBold.ttf", "truetype", 600, normal)
+@include add_font("Domine", "/static/fonts/Domine/static/Domine-Bold.ttf", "truetype", 700, normal)
+
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-Thin.ttf", "truetype", 100, normal)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-Light.ttf", "truetype", 300, normal)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-Regular.ttf", "truetype", 400, normal)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-Medium.ttf", "truetype", 500, normal)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-SemiBold.ttf", "truetype", 600, normal)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-Bold.ttf", "truetype", 700, normal)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-ExtraBold.ttf", "truetype", 800, normal)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-Black.ttf", "truetype", 900, normal)
+
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-Italic.ttf", "truetype", 400, italic)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-BoldItalic.ttf", "truetype", 700, italic)
+@include add_font("Poppins", "/static/fonts/Poppins/Poppins-ThinItalic.ttf", "truetype", 100, italic)

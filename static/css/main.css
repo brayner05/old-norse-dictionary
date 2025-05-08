@@ -1,5 +1,192 @@
+@font-face {
+  font-family: "Caudex";
+  src: url("/static/fonts/Caudex/Caudex-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Caudex";
+  src: url("/static/fonts/Caudex/Caudex-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Caudex";
+  src: url("/static/fonts/Caudex/Caudex-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Caudex";
+  src: url("/static/fonts/Caudex/Caudex-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("/static/fonts/Domine/Domine-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("/static/fonts/Domine/static/Domine-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("/static/fonts/Domine/static/Domine-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("/static/fonts/Domine/static/Domine-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Domine";
+  src: url("/static/fonts/Domine/static/Domine-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("/static/fonts/Poppins/Poppins-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
 main.admin-panel {
-  color: #000;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 4rem;
+  font-family: "Poppins";
+}
+main.admin-panel h1, main.admin-panel h2, main.admin-panel h3, main.admin-panel h4, main.admin-panel h5, main.admin-panel h6 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+main.admin-panel ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+main.admin-panel button {
+  padding: 0.7rem 1.2rem;
+  background-image: linear-gradient(#477beb, #0d43b8);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+main.admin-panel button.active {
+  background-image: linear-gradient(#003ec4, #002472);
+}
+main.admin-panel section#content {
+  border: #cfcfcf solid 2px;
+  border-radius: 8px;
+  width: 100%;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  min-height: 1px;
+}
+
+div.separator {
+  width: 100%;
+  height: 1.5px;
+  background-color: #e2e2e2;
+  border-radius: 50px;
+  margin-bottom: 2rem;
 }
 
 * {

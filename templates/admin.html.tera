@@ -7,6 +7,24 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>Hello, {{ words[0].native_word }}</h1>
+        <main class="admin-panel">
+            <h2>Admin Panel</h2>
+            <div class="separator"></div>
+            <ul>
+                <li>
+                    <button class="active" id="admin-button-view-entries">
+                        View Entries
+                    </button>
+                </li>
+                <li><button id="admin-button-add-entry">Add Entry</button></li>
+                <li>
+                    <button id="admin-button-view-insights">
+                        View Insights
+                    </button>
+                </li>
+            </ul>
+            <section id="content"></section>
+        </main>
+        <script type="text/javascript" src="/static/js/admin.js"></script>
     </body>
 </html>
