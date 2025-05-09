@@ -8,6 +8,8 @@ use rocket_dyn_templates::Template;
 pub mod database;
 pub mod models;
 pub mod routes;
+pub mod dtos;
+pub mod repositories;
 pub mod schema;
 
 

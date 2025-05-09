@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ word.native_word }}</title>
+    </head>
+    <body>
+        <nav></nav>
+        <main class="main-content">
+            <h1>{{ word.native_word }}</h1>
+            {# {{ %include "partials/" with(word=word) % }} #}
+        </main>
+    </body>
+</html>

@@ -4,6 +4,17 @@ const admin_config = {
     api_url: "/api",
 }
 
+class Word {
+    constructor(native_word, english_translation) {
+        this.native_word = native_word
+        this.english_translation = english_translation
+    }
+
+    toString() {
+        return `${this.native_word} (${this.english_translation})`
+    }
+}
+
 const admin_buttons = document.querySelectorAll("main.admin-panel ul button")
 
 const admin_panel = {
@@ -26,9 +37,9 @@ for (const button of admin_buttons) {
 }
 
 const get_all_words = async () => {
-    const response = await fetch(`${admin_config.api_url}/word`)
+    const response = await fetch(`${admin_config.api_url}/words`)
     const data = await response.json()
-    return data
+    return data.map(datum => new Word(datum.native_word, datum.english_translation))
 }
 
 const switch_panel = async () => {
@@ -46,7 +57,7 @@ const switch_panel = async () => {
     for (const word of words) {
         const item = document.createElement("div")
         item.classList.add("content-list-item")
-        item.innerText = word
+        item.innerText = word.toString()
         list.appendChild(item)
     }
 
