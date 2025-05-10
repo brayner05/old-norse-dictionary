@@ -1,1 +1,126 @@
+@use "_fonts"
 
+$heading-font-family: "Domine"
+$body-font-family: "Poppins"
+$page-padding-sides: 7rem
+
+body
+    font-family: $body-font-family
+
+nav
+    width: 100%
+    display: flex
+    align-items: center
+    // box-shadow: 0 1px 3px #00000049
+    background-color: #fff
+
+    .nav-partition
+        padding: 1rem $page-padding-sides
+        a
+            text-decoration: none
+            color: #000
+            font-weight: normal
+
+            &:hover
+                text-decoration: underline
+
+    .left, .right
+        flex-grow: 1
+
+    .left
+        padding-right: 0
+
+    .right
+        padding-left: 0
+
+    .center
+        flex-grow: 1
+        display: flex
+        justify-content: right
+        align-items: center
+        padding-left: 0
+
+        .search-bar
+            min-width: 60%
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 5px
+
+        input, button
+            padding: 0.4rem 0.5rem
+            border: 1px solid #a8a8a8
+            border-radius: inherit
+            transition: 0.3s ease-in-out
+
+            &:focus
+                outline: none
+                border: blue 1px solid
+                border-style: inset
+
+        input
+            flex: 1
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+
+        button
+            padding-left: 1rem
+            padding-right: 1rem
+            font-weight: 600
+            cursor: pointer
+            background-color: #fff
+            border-left: 0
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+            color: #272727
+
+strong
+    font-weight: 500
+
+main.main-content
+    width: 100%
+    min-height: 100vh
+    padding: 1rem $page-padding-sides
+    font-family: $body-font-family
+
+    h1.word-name
+        text-transform: lowercase
+
+    h1, h2, h3, h4, h5, h6
+        font-family: $heading-font-family
+        font-weight: 400
+        margin-bottom: 1rem
+
+    ul
+        list-style: none
+
+        li
+            .word-properties
+                margin-bottom: 2.2rem
+                word-spacing: 0.7rem
+                text-transform: capitalize
+
+    table
+        border-collapse: collapse
+        width: 100%
+
+        tr
+            // border: 1.5px inset #999
+
+        th, td
+            text-align: center
+            padding: 1.2rem
+            border: 1.5px inset #e6e6e6
+
+        tr:first-child
+            background-color: #cdd8ff
+            border: 1.5px inset #e6e6e6
+
+            td, th
+                border: none
+
+        th, td:first-child
+            font-family: $heading-font-family
+            font-weight: bold
+            padding-right: 0.5rem
+            padding-left: 0.5rem

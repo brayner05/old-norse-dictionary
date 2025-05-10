@@ -4,12 +4,83 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{{ word.native_word }}</title>
+        <link rel="stylesheet" href="/static/css/main.css" />
     </head>
     <body>
-        <nav></nav>
+        <nav>
+            <div class="nav-partition left">
+                <a href="/">Home</a>
+            </div>
+            <div class="nav-partition center">
+                <div class="search-bar">
+                    <input type="text" />
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+            {#
+            <div class="nav-partition right"></div>
+            #}
+        </nav>
         <main class="main-content">
-            <h1>{{ word.native_word }}</h1>
-            {# {{ %include "partials/" with(word=word) % }} #}
+            <h1 class="word-name">{{ word.native_word }}</h1>
+            <div class="separator"></div>
+            <ul>
+                {% for definition in word.definitions %}
+                <li>
+                    <h3>{{ definition.type }}</h3>
+                    {% if definition.type == "Noun" %}
+                    <div class="word-properties">
+                        <i class="gender">{{ definition.data.gender }}</i>
+                        &bullet;
+                        <i class="strength">{{ definition.data.strength }}</i>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Case</th>
+                            <th>Singular</th>
+                            <th>Plural</th>
+                        </tr>
+                        <tr>
+                            <td>Nominative</td>
+                            <td>
+                                {{ definition.data.declension_table.nom_sg }}
+                            </td>
+                            <td>
+                                {{ definition.data.declension_table.nom_pl }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Accusative</td>
+                            <td>
+                                {{ definition.data.declension_table.acc_sg }}
+                            </td>
+                            <td>
+                                {{ definition.data.declension_table.acc_pl }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dative</td>
+                            <td>
+                                {{ definition.data.declension_table.dat_sg }}
+                            </td>
+                            <td>
+                                {{ definition.data.declension_table.dat_pl }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Genitive</td>
+                            <td>
+                                {{ definition.data.declension_table.gen_sg }}
+                            </td>
+                            <td>
+                                {{ definition.data.declension_table.gen_pl }}
+                            </td>
+                        </tr>
+                    </table>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
         </main>
     </body>
 </html>
